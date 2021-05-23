@@ -61,9 +61,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="79dp"
         android:layout_marginTop="37dp"
-        android:layout_marginEnd="63dp"
-        android:text="For more proyects, visit my Github danixl30"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="For more proyects, visit my Github"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewabout" />
+
+    <TextView
+        android:id="@+id/github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="61dp"
+        android:clickable="true"
+        android:linksClickable="true"
+        android:text="danixl30"
+        android:textColor="#3F51B5"
+        android:textColorLink="#03A9F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textviewabout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

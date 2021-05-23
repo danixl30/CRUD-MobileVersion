@@ -1,6 +1,7 @@
 package com.example.crudmobileversion.ui.notifications
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -36,6 +37,7 @@ class NotificationsFragment : Fragment() {
         val texthome = root.findViewById<TextView>(R.id.accountusername)
         val title = root.findViewById<TextView>(R.id.titleabout)
         val textview = root.findViewById<TextView>(R.id.textviewabout)
+        val github = root.findViewById<TextView>(R.id.github)
 
         title.startAnimation(animationDown)
         texthome.startAnimation(animationUp)
@@ -43,6 +45,8 @@ class NotificationsFragment : Fragment() {
         textview.startAnimation(animationUp)
 
         getUser(root)
+
+        github.setOnClickListener { goToGithub() }
 
         logoutButton.setOnClickListener { logout() }
         return root
@@ -101,5 +105,10 @@ class NotificationsFragment : Fragment() {
     private fun goToMain(){
         val mainScreen = Intent(activity, MainActivity::class.java)
         startActivity(mainScreen)
+    }
+
+    private fun goToGithub(){
+        val github = Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/danixl30/CRUD-MobileVersion"))
+        startActivity(github)
     }
 }
